@@ -1,5 +1,10 @@
 package client.chat;
 
+/*
+*
+* @author Nirav Chavda
+*/
+
 import java.io.*;
 import java.net.*;
 import javax.swing.DefaultListModel;
@@ -15,7 +20,8 @@ public class ClientReadHandler extends Thread {
     private final JList chatbox;
     private final JComboBox<String> studentList;
 
-    public ClientReadHandler(Socket socket, ChatClient client, DefaultListModel model, JList chatbox, JComboBox<String> studentList) {
+    public ClientReadHandler(Socket socket, ChatClient client, DefaultListModel model, JList chatbox,
+            JComboBox<String> studentList) {
         this.socket = socket;
         this.client = client;
         this.model = model;
