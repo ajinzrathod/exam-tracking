@@ -15,7 +15,7 @@
 > Please import Database named "exam_management.sql" available at root folder.
 
 ### Steps:
-
+* Turn on MySQL at Port 3306
 * Server Start:
 1. src/server/ChatServer.java
 2. src/server/FileRecieve.java
