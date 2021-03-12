@@ -11,6 +11,7 @@ Edit server details in server.properties
 Free Ports Required:
 8989
 7000
+MySQL at Port 3306
 
 Please import Database named "exam_management.sql" available at root folder.
 
