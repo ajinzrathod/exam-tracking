@@ -1,5 +1,10 @@
 package client.faculty;
 
+/*
+*
+* @author Nirav Chavda
+*/
+
 import client.chat.ClientReadHandler;
 import client.chat.ChatClient;
 import java.io.FileNotFoundException;
@@ -16,16 +21,18 @@ import javax.swing.DefaultListModel;
 
 public class FacultyUI extends javax.swing.JFrame {
 
-//FOR LOCALHOST
-//    private static final String DB_URL = "jdbc:mysql://localhost:3306/exam_management";
-//    private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-//    private static final String USER = "root";
-//    private static final String PASSWORD = "";
-//FOR AWS
-//    private static final String DB_URL = "jdbc:mysql://exam-management-aws.cpyjaypv4zdd.us-east-1.rds.amazonaws.com/exam_management";
-//    private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-//    private static final String USER = "admin";
-//    private static final String PASSWORD = "7801898047";
+    // FOR LOCALHOST
+    // private static final String DB_URL =
+    // "jdbc:mysql://localhost:3306/exam_management";
+    // private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    // private static final String USER = "root";
+    // private static final String PASSWORD = "";
+    // FOR AWS
+    // private static final String DB_URL =
+    // "jdbc:mysql://exam-management-aws.cpyjaypv4zdd.us-east-1.rds.amazonaws.com/exam_management";
+    // private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    // private static final String USER = "admin";
+    // private static final String PASSWORD = "7801898047";
     private static String DB_URL;
     private static String JDBC_DRIVER;
     private static String USER;
@@ -88,7 +95,8 @@ public class FacultyUI extends javax.swing.JFrame {
     }
 
     private void loadDataFromDatabase() {
-        try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD); Statement statement = connection.createStatement()) {
+        try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+                Statement statement = connection.createStatement()) {
             Class.forName(JDBC_DRIVER);
             System.out.println("Creating connection...");
             System.out.println("Creating statement...");
@@ -110,7 +118,8 @@ public class FacultyUI extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -150,64 +159,63 @@ public class FacultyUI extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(facultyUIDisplayExamID)
-                            .addComponent(facultyUIDisplayExamName)
-                            .addComponent(facultyUIDisplayFacultyUsername))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(93, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(68, 68, 68)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(facultyUIChatTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup().addGroup(layout
+                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup().addGap(63, 63, 63)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(facultyUIDisplayExamID).addComponent(facultyUIDisplayExamName)
+                                        .addComponent(facultyUIDisplayFacultyUsername))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                layout.createSequentialGroup().addContainerGap(93, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 306,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(68, 68, 68)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(facultyUIChatTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 161,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(facultyUISendButton, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jScrollPane1).addComponent(facultyUIComboBox, 0,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(29, 29, 29)));
+        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
+                .createSequentialGroup().addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
+                        .createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 237,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(facultyUISendButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1)
-                    .addComponent(facultyUIComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(facultyUIComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(facultyUIComboBox, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(facultyUIChatTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(facultyUISendButton)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(facultyUIDisplayExamID)
-                        .addGap(11, 11, 11)
-                        .addComponent(facultyUIDisplayFacultyUsername)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(facultyUIDisplayExamName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(58, Short.MAX_VALUE))
-        );
+                                .addComponent(facultyUIChatTextBox, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(facultyUISendButton)))
+                        .addGroup(layout.createSequentialGroup().addComponent(facultyUIDisplayExamID).addGap(11, 11, 11)
+                                .addComponent(facultyUIDisplayFacultyUsername)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(facultyUIDisplayExamName)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 185,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(58, Short.MAX_VALUE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void facultyUISendButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facultyUISendButtonActionPerformed
+    private void facultyUISendButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_facultyUISendButtonActionPerformed
         String sendTo = (String) facultyUIComboBox.getSelectedItem();
         sendTo = sendTo.startsWith("Everyone") ? "" : "@" + sendTo;
         writer.println(sendTo + " " + facultyUIChatTextBox.getText());
         model.addElement(facultyUIChatTextBox.getText());
         facultyUIChatBox.setModel(model);
-    }//GEN-LAST:event_facultyUISendButtonActionPerformed
+    }// GEN-LAST:event_facultyUISendButtonActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -217,7 +225,8 @@ public class FacultyUI extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+                | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FacultyUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
